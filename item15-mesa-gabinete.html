@@ -25,15 +25,15 @@
   </div>
 
   <header class="page-header">
-    <p class="small"><a href="index.html">← Voltar para a lista do acervo</a></p>
+    <p class="small"><a href="index.html" onclick="try{sessionStorage.setItem('memorialReturnFocus', 'item15-mesa-gabinete.html');}catch(e){}">← Voltar para a lista do acervo</a></p>
     <h1>Mesa de gabinete em madeira maciça, de tom escuro, com entalhes decorativos</h1>
 </header>
 
   <main id="conteudo">
     <section aria-labelledby="ouvir-ad" class="card">
-      <h2 id="ouvir-ad">Ouvir audiodescrição</h2>
+      <h2 id="ouvir-ad">Use os botões para reproduzir ou pausar, voltar ou avançar 10 segundos e ajustar a velocidade.</h2>
       <div class="player-wrapper" role="group" aria-label="Reprodutor de audiodescrição">
-        <audio id="player" preload="metadata" aria-describedby="ajuda-controles">
+        <audio id="player" preload="metadata">
           <source src="media/audio15.mp3" type="audio/mpeg">
           Seu navegador não suporta o elemento <code>audio</code>. Baixe o arquivo <a href="media/audio15.mp3">aqui</a>.
         </audio>
@@ -46,9 +46,7 @@
           <button type="button" class="btn" data-action="faster" aria-label="Aumentar velocidade">+ velocidade</button>
           <span class="rate" aria-live="polite" aria-atomic="true">Velocidade: 1.00×</span>
         </div>
-        <p class="tempo" aria-live="polite">Tempo: 0:00 / 0:00</p>
-
-        <p id="ajuda-controles" class="sr-only">Use os botões para voltar 10 segundos, reproduzir ou pausar, avançar 10 segundos e ajustar a velocidade.</p>
+        <p class="tempo" aria-live="polite" aria-atomic="true">Tempo: 0:00 / 0:00</p>
       </div>
     </section>
 
