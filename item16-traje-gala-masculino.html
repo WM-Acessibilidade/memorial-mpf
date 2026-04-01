@@ -33,19 +33,20 @@
     <section aria-labelledby="ouvir-ad" class="card">
       <h2 id="ouvir-ad">Ouvir audiodescrição</h2>
       <div class="player-wrapper" role="group" aria-label="Reprodutor de audiodescrição">
-        <audio id="player" preload="metadata" controls aria-describedby="ajuda-controles">
+        <audio id="player" preload="metadata" aria-describedby="ajuda-controles">
           <source src="media/audio16.mp3" type="audio/mpeg">
           Seu navegador não suporta o elemento <code>audio</code>. Baixe o arquivo <a href="media/audio16.mp3">aqui</a>.
         </audio>
 
         <div class="player-controls">
+          <button data-initial-focus="true" type="button" class="btn" data-action="playpause" aria-label="Reproduzir ou pausar">⏯️</button>
           <button type="button" class="btn" data-action="rewind" aria-label="Voltar 10 segundos">⏪ 10s</button>
-          <button type="button" class="btn" data-action="playpause" aria-label="Reproduzir ou pausar">⏯️</button>
           <button type="button" class="btn" data-action="forward" aria-label="Avançar 10 segundos">⏩ 10s</button>
           <button type="button" class="btn" data-action="slower" aria-label="Diminuir velocidade">− velocidade</button>
           <button type="button" class="btn" data-action="faster" aria-label="Aumentar velocidade">+ velocidade</button>
           <span class="rate" aria-live="polite" aria-atomic="true">Velocidade: 1.00×</span>
         </div>
+        <p class="tempo" aria-live="polite">Tempo: 0:00 / 0:00</p>
 
         <p id="ajuda-controles" class="sr-only">Use os botões para voltar 10 segundos, reproduzir ou pausar, avançar 10 segundos e ajustar a velocidade.</p>
       </div>
