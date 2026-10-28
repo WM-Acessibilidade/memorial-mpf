@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "items": {
+    "item01": {
+      "original": "item01-exposicao-comemorativa.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item02": {
+      "original": "item02-maquete-pgr.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item03": {
+      "original": "item03-pedro-jorge.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item04": {
+      "original": "item04-premios-parte1.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item05": {
+      "original": "item05-premios-parte2.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item06": {
+      "original": "item06-premios-parte3.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item07": {
+      "original": "item07-constituicao-1988.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item08": {
+      "original": "item08-olivetti-lettera-32.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item09": {
+      "original": "item09-pasta-processos.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item10": {
+      "original": "item10-cadeira-decada-1940.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item11": {
+      "original": "item11-campainha-deluxe-440.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item12": {
+      "original": "item12-porta-cigarros-cinzeiros.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item13": {
+      "original": "item13-bandeja-documentos.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item14": {
+      "original": "item14-mancebo-cabideiro.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item15": {
+      "original": "item15-mesa-gabinete.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item16": {
+      "original": "item16-traje-gala-masculino.html",
+      "audire": "",
+      "active": "original"
+    },
+    "item17": {
+      "original": "item17-veste-talar-feminina.html",
+      "audire": "",
+      "active": "original"
+    }
+  }
+}
