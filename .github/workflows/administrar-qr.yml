@@ -28,6 +28,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           persist-credentials: true
+      - name: Testar segurança dos redirecionamentos
+        run: python3 -m unittest discover -s tests -p 'test_*.py'
       - name: Validar e atualizar configuração
         env:
           QR_ITEM: ${{ inputs.item }}
