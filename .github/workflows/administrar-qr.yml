@@ -1,0 +1,47 @@
+name: Administrar destinos dos QR Codes
+on:
+  workflow_dispatch:
+    inputs:
+      item:
+        description: "Item (ou todos)"
+        type: choice
+        required: true
+        options: [item01, item02, item03, item04, item05, item06, item07, item08, item09, item10, item11, item12, item13, item14, item15, item16, item17, todos]
+      destino:
+        description: "Destino"
+        type: choice
+        required: true
+        options: [original, audire]
+      url_audire:
+        description: "Endereço HTTPS do Audire (somente para item individual; deixe vazio para manter o cadastrado)"
+        type: string
+        required: false
+permissions:
+  contents: write
+concurrency:
+  group: destinos-qr
+  cancel-in-progress: false
+jobs:
+  atualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+      - name: Validar e atualizar configuração
+        env:
+          QR_ITEM: ${{ inputs.item }}
+          QR_DESTINO: ${{ inputs.destino }}
+          QR_URL: ${{ inputs.url_audire }}
+        run: python3 scripts/atualizar_destinos_qr.py
+      - name: Salvar alteração auditável
+        run: |
+          if git diff --quiet -- config/destinos-qr.json; then
+            echo "Sem alterações"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add config/destinos-qr.json
+          git commit -m "Atualizar destinos dos QR Codes via painel GitHub"
+          git push
