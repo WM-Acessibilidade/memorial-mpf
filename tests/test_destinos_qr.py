@@ -45,6 +45,23 @@ class DestinosQRTests(unittest.TestCase):
         self.assertEqual(data["items"]["item01"]["active"], "audire")
         self.assertTrue(all(v["active"] == "original" for k, v in data["items"].items() if k != "item01"))
 
+    def test_alterar_url_nao_modifica_roteiros_ou_outros_itens(self):
+        before = json.loads(CONFIG.read_text(encoding="utf-8"))
+        url = "https://audesc-events-api.onrender.com/audire/q/teste-seguro"
+        result, after = self.run_case("item01", "audire", url)
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(after["items"]["item01"]["original"], before["items"]["item01"]["original"])
+        self.assertEqual(after["items"]["item01"]["audire"], url)
+        for key in list(before["items"])[1:]:
+            self.assertEqual(after["items"][key], before["items"][key])
+
+    def test_reverter_preserva_endereco_audire_para_uso_futuro(self):
+        before = json.loads(CONFIG.read_text(encoding="utf-8"))
+        result, after = self.run_case("item01", "original")
+        self.assertEqual(result.returncode, 0, result.stderr)
+        self.assertEqual(after["items"]["item01"]["audire"], before["items"]["item01"]["audire"])
+        self.assertEqual(after["items"]["item01"]["original"], before["items"]["item01"]["original"])
+
     def test_17_rotas_consultam_item_correto_e_preservam_retorno(self):
         data = json.loads(CONFIG.read_text(encoding="utf-8"))
         self.assertEqual(len(data["items"]), 17)
