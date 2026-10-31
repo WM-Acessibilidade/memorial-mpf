@@ -3,8 +3,8 @@
   "items": {
     "item01": {
       "original": "item01-exposicao-comemorativa.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/83vwik1k",
+      "active": "audire"
     },
     "item02": {
       "original": "item02-maquete-pgr.html",
