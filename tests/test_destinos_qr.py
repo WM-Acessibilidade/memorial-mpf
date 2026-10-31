@@ -45,5 +45,19 @@ class DestinosQRTests(unittest.TestCase):
         self.assertEqual(data["items"]["item01"]["active"], "audire")
         self.assertTrue(all(v["active"] == "original" for k, v in data["items"].items() if k != "item01"))
 
+    def test_17_rotas_consultam_item_correto_e_preservam_retorno(self):
+        data = json.loads(CONFIG.read_text(encoding="utf-8"))
+        self.assertEqual(len(data["items"]), 17)
+        for i in range(1, 18):
+            item = f"item{i:02d}"
+            page = ROOT / "q" / item / "index.html"
+            with self.subTest(item=item):
+                self.assertTrue(page.is_file(), f"Rota ausente: {page}")
+                html = page.read_text(encoding="utf-8")
+                self.assertIn(f'c.items["{item}"]', html)
+                self.assertIn("config/destinos-qr.json", html)
+                self.assertIn("location.replace(fallback)", html)
+                self.assertIn(data["items"][item]["original"], html)
+
 if __name__ == "__main__":
     unittest.main()
