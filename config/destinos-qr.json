@@ -8,8 +8,8 @@
     },
     "item02": {
       "original": "item02-maquete-pgr.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/s41o__gc",
+      "active": "audire"
     },
     "item03": {
       "original": "item03-pedro-jorge.html",
