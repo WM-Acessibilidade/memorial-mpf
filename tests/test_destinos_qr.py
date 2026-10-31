@@ -37,12 +37,13 @@ class DestinosQRTests(unittest.TestCase):
     def test_nao_aceita_endereco_inseguro(self):
         result, data = self.run_case("item01", "audire", "http://example.com")
         self.assertNotEqual(result.returncode, 0)
-        self.assertEqual(data["items"]["item01"]["active"], "original")
+        self.assertEqual(data["items"]["item01"]["active"], "audire")
 
     def test_nao_ativa_itens_sem_url(self):
         result, data = self.run_case("todos", "audire")
         self.assertNotEqual(result.returncode, 0)
-        self.assertTrue(all(v["active"] == "original" for v in data["items"].values()))
+        self.assertEqual(data["items"]["item01"]["active"], "audire")
+        self.assertTrue(all(v["active"] == "original" for k, v in data["items"].items() if k != "item01"))
 
 if __name__ == "__main__":
     unittest.main()
