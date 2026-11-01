@@ -1,15 +1,36 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecionando…</title>
-  <meta http-equiv="refresh" content="0; url=../../item08-olivetti-lettera-32.html?qr=item08">
-  <script>
-    location.replace("../../item08-olivetti-lettera-32.html?qr=item08");
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memorial MPF — Máquina de Escrever Portátil</title>
 </head>
 <body>
-  <p>Redirecionando para o item. Caso a página não abra automaticamente, <a href="../../item08-olivetti-lettera-32.html?qr=item08">clique aqui</a>.</p>
+<main>
+<h1>Máquina de Escrever Portátil</h1>
+<p role="status">Abrindo a audiodescrição…</p>
+<p>Se não houver redirecionamento, <a href="../../item08-olivetti-lettera-32.html?qr=item08">acesse o roteiro original</a>.</p>
+</main>
+<script>
+(async () => {
+  const fallback = "../../item08-olivetti-lettera-32.html?qr=item08";
+  try {
+    const response = await fetch("../../config/destinos-qr.json", {cache: "no-store"});
+    if (!response.ok) throw new Error("Configuração indisponível");
+    const config = await response.json();
+    const item = config.items && config.items.item08;
+    if (item && item.active === "audire" && typeof item.audire === "string") {
+      const url = new URL(item.audire);
+      if (url.protocol === "https:" && url.hostname === "audesc-events-api.onrender.com" &&
+          url.pathname === "/audire/q/kr2nwlr-" && !url.username && !url.password) {
+        location.replace(url.href);
+        return;
+      }
+    }
+  } catch (error) {}
+  location.replace(fallback);
+})();
+</script>
+<noscript><p>JavaScript desativado. <a href="../../item08-olivetti-lettera-32.html?qr=item08">Abrir roteiro original</a>.</p></noscript>
 </body>
 </html>
