@@ -18,18 +18,18 @@
     },
     "item04": {
       "original": "item04-premios-parte1.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/bphxcm8f",
+      "active": "audire"
     },
     "item05": {
       "original": "item05-premios-parte2.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/xdnv5nup",
+      "active": "audire"
     },
     "item06": {
       "original": "item06-premios-parte3.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/au4xmiz4",
+      "active": "audire"
     },
     "item07": {
       "original": "item07-constituicao-1988.html",
