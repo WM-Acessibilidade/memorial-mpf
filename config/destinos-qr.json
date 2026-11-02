@@ -68,23 +68,23 @@
     },
     "item14": {
       "original": "item14-mancebo-cabideiro.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/_coxgrh3",
+      "active": "audire"
     },
     "item15": {
       "original": "item15-mesa-gabinete.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/axo8389a",
+      "active": "audire"
     },
     "item16": {
       "original": "item16-traje-gala-masculino.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/hu3qvlus",
+      "active": "audire"
     },
     "item17": {
       "original": "item17-veste-talar-feminina.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/m-i6jcoj",
+      "active": "audire"
     }
   }
 }
