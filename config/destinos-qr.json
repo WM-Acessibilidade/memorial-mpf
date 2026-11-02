@@ -53,18 +53,18 @@
     },
     "item11": {
       "original": "item11-campainha-deluxe-440.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/bdplgig-",
+      "active": "audire"
     },
     "item12": {
       "original": "item12-porta-cigarros-cinzeiros.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/f2imkvyn",
+      "active": "audire"
     },
     "item13": {
       "original": "item13-bandeja-documentos.html",
-      "audire": "",
-      "active": "original"
+      "audire": "https://audesc-events-api.onrender.com/audire/q/jlum1npm",
+      "active": "audire"
     },
     "item14": {
       "original": "item14-mancebo-cabideiro.html",

@@ -1,15 +1,36 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Redirecionando…</title>
-  <meta http-equiv="refresh" content="0; url=../../item13-bandeja-documentos.html?qr=item13">
-  <script>
-    location.replace("../../item13-bandeja-documentos.html?qr=item13");
-  </script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Memorial MPF — Bandeja de Documentos e Perfurador de Papel</title>
 </head>
 <body>
-  <p>Redirecionando para o item. Caso a página não abra automaticamente, <a href="../../item13-bandeja-documentos.html?qr=item13">clique aqui</a>.</p>
+<main>
+<h1>Bandeja de Documentos e Perfurador de Papel</h1>
+<p role="status">Abrindo a audiodescrição…</p>
+<p>Se não houver redirecionamento, <a href="../../item13-bandeja-documentos.html?qr=item13">acesse o roteiro original</a>.</p>
+</main>
+<script>
+(async () => {
+  const fallback = "../../item13-bandeja-documentos.html?qr=item13";
+  try {
+    const response = await fetch("../../config/destinos-qr.json", {cache: "no-store"});
+    if (!response.ok) throw new Error("Configuração indisponível");
+    const config = await response.json();
+    const item = config.items && config.items.item13;
+    if (item && item.active === "audire" && typeof item.audire === "string") {
+      const url = new URL(item.audire);
+      if (url.protocol === "https:" && url.hostname === "audesc-events-api.onrender.com" &&
+          url.pathname === "/audire/q/jlum1npm" && !url.username && !url.password) {
+        location.replace(url.href);
+        return;
+      }
+    }
+  } catch (error) {}
+  location.replace(fallback);
+})();
+</script>
+<noscript><p>JavaScript desativado. <a href="../../item13-bandeja-documentos.html?qr=item13">Abrir roteiro original</a>.</p></noscript>
 </body>
 </html>
